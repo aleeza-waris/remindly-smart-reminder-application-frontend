@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme inline {
+  --color-remindly-page: var(--remindly-page);
+  --color-remindly-surface: var(--remindly-surface);
+  --color-remindly-elevated-surface: var(--remindly-elevated-surface);
+  --color-remindly-text: var(--remindly-text);
+  --color-remindly-muted: var(--remindly-muted);
+  --color-remindly-border: var(--remindly-border);
+  --color-remindly-burgundy: var(--remindly-burgundy);
+  --color-remindly-wine-rose: var(--remindly-wine-rose);
+  --color-remindly-dusty-blush: var(--remindly-dusty-blush);
+  --color-remindly-warm-cream: var(--remindly-warm-cream);
+  --color-remindly-white: var(--remindly-white);
+  --color-remindly-charcoal-brown: var(--remindly-charcoal-brown);
+  --color-remindly-placeholder: var(--remindly-placeholder);
+  --color-remindly-focus: var(--remindly-focus);
+  --color-remindly-focus: var(--remindly-focus);
+  --color-remindly-action-text: var(--remindly-action-text);
+  --color-remindly-text-accent: var(--remindly-text-accent);
+  --color-remindly-text-accent-secondary: var(--remindly-text-accent-secondary);
+  --color-remindly-chart-burgundy: var(--remindly-chart-burgundy);
+  --color-remindly-chart-rose: var(--remindly-chart-rose);
+  --color-remindly-danger: var(--remindly-danger);
+  --color-remindly-success: var(--remindly-success);
+  --color-remindly-warning: var(--remindly-warning);
+  --color-remindly-danger-soft: var(--remindly-danger-soft);
+  --color-remindly-success-soft: var(--remindly-success-soft);
+  --color-remindly-warning-soft: var(--remindly-warning-soft);
+  --color-remindly-category-blush: var(--remindly-category-blush);
+  --color-remindly-category-green: var(--remindly-category-green);
+  --color-remindly-category-amber: var(--remindly-category-amber);
+  --color-remindly-category-slate: var(--remindly-category-slate);
+  --color-remindly-category-violet: var(--remindly-category-violet);
+}
+
+@theme {
+  --animate-dashboard-loading: dashboard-loading 1.3s ease-in-out infinite;
+  --animate-remindly-bell-float: remindly-bell-float 2.4s ease-in-out infinite;
+     --animate-remindly-hero-enter: remindly-hero-enter 700ms ease-out both;
+  --animate-remindly-preview-float: remindly-preview-float 5s ease-in-out infinite;
+
+  @keyframes remindly-hero-enter {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes remindly-preview-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  @keyframes remindly-bell-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+      transform: translateY(-12px) rotate(2deg);
+    }
+  }
+}
+
+:root {
+  color-scheme: light;
+  --remindly-page: #faf5f0;
+  --remindly-surface: #ffffff;
+  --remindly-elevated-surface: #ffffff;
+  --remindly-text: #302328;
+  --remindly-focus: #913f4d;
+  --remindly-placeholder: #9a898c;
+  --remindly-action-text: #ffffff;
+  --remindly-chart-burgundy: #702632;
+  --remindly-chart-rose: #913f4d;
+  --remindly-text-accent: #702632;
+  --remindly-text-accent-secondary: #913f4d;
+  --remindly-burgundy: #702632;
+  --remindly-wine-rose: #913f4d;
+  --remindly-dusty-blush: #e8c9c6;
+  --remindly-warm-cream: #faf5f0;
+  --remindly-white: #ffffff;
+  --remindly-charcoal-brown: #302328;
+  --remindly-muted: #78666a;
+  --remindly-border: #e8dcd8;
+  --remindly-danger: #a11c2d;
+  --remindly-success: #3f8460;
+  --remindly-warning: #a66319;
+  --remindly-danger-soft: #fae9eb;
+  --remindly-success-soft: #e9f2ec;
+  --remindly-warning-soft: #f8efe2;
+  --remindly-category-blush: #e8c9c6;
+  --remindly-category-green: #3f8460;
+  --remindly-category-amber: #bd7b2d;
+  --remindly-category-slate: #718096;
+  --remindly-category-violet: #9271a8;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --remindly-page: #111318;
+  --remindly-surface: #1b1f27;
+  --remindly-elevated-surface: #252a34;
+  --remindly-text: #f1f5f9;
+  --remindly-focus: #e8c9c6;
+  --remindly-placeholder: #94a3b8;
+  --remindly-action-text: #f1f5f9;
+  --remindly-chart-burgundy: #d58b97;
+  --remindly-chart-rose: #c08490;
+  --remindly-text-accent: #e8aab4;
+  --remindly-text-accent-secondary: #d58b97;
+  --remindly-burgundy: #702632;
+  --remindly-wine-rose: #913f4d;
+  --remindly-dusty-blush: #e8c9c6;
+  --remindly-warm-cream: #1b1f27;
+  --remindly-white: #252a34;
+  --remindly-charcoal-brown: #f1f5f9;
+  --remindly-muted: #94a3b8;
+  --remindly-border: #353b47;
+  --remindly-danger: #f1a6ae;
+  --remindly-success: #a9dec0;
+  --remindly-warning: #f0c58f;
+  --remindly-danger-soft: #3a242a;
+  --remindly-success-soft: #20352b;
+  --remindly-warning-soft: #3b3022;
+  --remindly-category-blush: #c58f99;
+  --remindly-category-green: #83cba2;
+  --remindly-category-amber: #edbc79;
+  --remindly-category-slate: #94a3b8;
+  --remindly-category-violet: #c4a0dc;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--remindly-page);
+  color: var(--remindly-text);
+}
+
+:root .remindly-table.ant-table-wrapper .ant-table-thead > tr > th {
+  background: var(--remindly-elevated-surface) !important;
+  color: var(--remindly-text) !important;
+}
+
+@keyframes dashboard-loading {
+  to {
+    background-position-x: -220%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .remindly-hero-enter {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  .remindly-preview-float {
+    animation: none !important;
+  }
+}
